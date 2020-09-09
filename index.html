@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sticky NavBar on Scroll</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header>
+    <a href="#" class="brand">Logo</a>
+    <ul>
+      <li>
+        <a href="#">Home</a>
+      </li>
+      <li>
+        <a href="#">Blog</a>
+      </li>
+      <li>
+        <a href="#">About</a>
+      </li>
+      <li>
+        <a href="#">Contact Us</a>
+      </li>
+    </ul>
+  </header>
+
+  <section>
+    <h1>
+      SCROLL THIS PAGE TO SEE THE EFFECT
+    </h1>
+    <div class="content">
+      <div>
+        <p>
+          Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.
+          The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of
+          Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h1>
+      SCROLL THIS PAGE TO SEE THE EFFECT
+    </h1>
+    <div class="content">
+      <div>
+        <p>
+          Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.
+          The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of
+          Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.
+        </p>
+      </div>
+    </div>
+  </section>  
+
+  <script>
+    window.addEventListener('scroll', function(){
+      let header = document.querySelector('header');
+      header.classList.toggle("stickToTop", window.scrollY > 500);
+    });
+  </script>
+</body>
+</html>
